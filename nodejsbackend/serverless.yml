@@ -1,0 +1,19 @@
+service: course-backend
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: ap-south-1
+  environment:
+    DB_URI: ${ssm:/course-backend/MONGO_URI}  # from SSM Parameter Store
+
+functions:
+  app:
+    handler: index.handler
+    events:
+      - http:
+          path: /{proxy+}
+          method: ANY
+
+plugins:
+  - serverless-offline

@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 22
+    commands:
+      - echo "Installing Serverless Framework..."
+      - npm install -g serverless
+      - npm install
+  build:
+    commands:
+      - echo "Deploying using Serverless..."
+      - serverless deploy --stage dev
