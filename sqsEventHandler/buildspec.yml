@@ -6,12 +6,14 @@ phases:
       nodejs: 22
     commands:
       - echo "Installing dependencies for SQS Handler Lambda..."
+      - cd sqsEventHandler  # ⬅️ Assuming your code is inside the `sqshandler/` folder
       - npm install
   build:
     commands:
       - echo "Zipping SQS Handler Lambda..."
+      - cd sqsEventHandler
       - zip -r sqs-handler.zip .
 artifacts:
   files:
-    - sqs-handler.zip
+    - sqsEventHandler/sqs-handler.zip
   discard-paths: yes
