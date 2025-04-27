@@ -11,7 +11,6 @@ phases:
   build:
     commands:
       - echo "Zipping Backend Lambda..."
-      - cd nodejsbackend
       - zip -r backend-lambda.zip .
 artifacts:
   base-directory: nodejsbackend
