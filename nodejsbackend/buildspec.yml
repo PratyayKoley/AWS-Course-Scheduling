@@ -6,14 +6,15 @@ phases:
       nodejs: 22
     commands:
       - echo "Installing dependencies for Backend Lambda..."
-      - cd nodejsbackend    # ⬅️ Go inside nodejsbackend first
+      - cd nodejsbackend
       - npm install
   build:
     commands:
       - echo "Zipping Backend Lambda..."
-      - cd nodejsbackend    # ⬅️ Stay inside while zipping too
+      - cd nodejsbackend
       - zip -r backend-lambda.zip .
 artifacts:
+  base-directory: nodejsbackend
   files:
-    - nodejsbackend/backend-lambda.zip
+    - backend-lambda.zip
   discard-paths: yes
