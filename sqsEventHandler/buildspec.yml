@@ -5,13 +5,13 @@ phases:
     runtime-versions:
       nodejs: 22
     commands:
-      - echo "Installing dependencies for Backend Lambda..."
+      - echo "Installing dependencies for SQS Handler Lambda..."
       - npm install
   build:
     commands:
-      - echo "Zipping Backend Lambda..."
-      - zip -r backend-lambda.zip .
+      - echo "Zipping SQS Handler Lambda..."
+      - zip -r sqs-handler.zip .
 artifacts:
   files:
-    - backend-lambda.zip
+    - sqs-handler.zip
   discard-paths: yes
