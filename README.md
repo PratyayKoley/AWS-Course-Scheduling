@@ -98,7 +98,7 @@ The platform is hosted at [se-cs.vercel.app](https://se-cs.vercel.app).
 
 *AWS Architecture*
 
-![AWS Architecture](./assets/AWS CS.png "AWS Architecture")
+![AWS Architecture](./assets/AWS_CS.png "AWS Architecture")
 
 *FlowChart*
 
